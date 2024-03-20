@@ -1,0 +1,850 @@
+[
+     {
+      "kana": "あさ",
+      "sound": "あ￢さ",
+      "romanji": "asa",
+      "german": "Morgen",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "いいえ",
+      "sound": "いいえ￢",
+      "romanji": "iie",
+      "german": "nein (nicht doch, nicht der Rede Wert)",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "いえ",
+      "sound": "いえ￢",
+      "romanji": "ie",
+      "german": "Haus",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "いす",
+      "sound": "いす￣",
+      "romanji": "isu",
+      "german": "Stuhl",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "いぬ ",
+      "sound": "いぬ￢",
+      "romanji": "inu",
+      "german": "Hund",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "うみ",
+      "sound": "う￢み",
+      "romanji": "umi ",
+      "german": "Meer",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "おちゃ（ちゃ)",
+      "sound": "おちゃ￣ ",
+      "romanji": "ocha(cha)",
+      "german": "(grüner) Tee",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "かぞく",
+      "sound": "か￢ぞく",
+      "romanji": "kazoku",
+      "german": "Familie",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "ご／～ご",
+      "sound": "～ご￣ ",
+      "romanji": "～go",
+      "german": "-isch (Suffix für die Sprache)",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "さかな／魚",
+      "sound": "さかな￣",
+      "romanji": "sakana",
+      "german": "Fisch",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "ざっし",
+      "sound": "ざっし￣",
+      "romanji": "zasshi",
+      "german": "Zeitschrift",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "そら",
+      "sound": "そ￢ら",
+      "romanji": "sora",
+      "german": "Himmel",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "卵",
+      "sound": "たま￢ご",
+      "romanji": "tamago",
+      "german": "Ei",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "つくえ",
+      "sound": "つくえ￣",
+      "romanji": "tsukue",
+      "german": "Schreibtisch",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "てんぷら",
+      "sound": "てんぷら￣",
+      "romanji": "tenpura",
+      "german": "Tempura",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "とうきょう／東京",
+      "sound": "とうきょう￣",
+      "romanji": "Tookyoo",
+      "german": "Tokyo",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "とけい",
+      "sound": "とけい￣",
+      "romanji": "tokee",
+      "german": "Uhr",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "にほんご",
+      "sound": "にほんご￣",
+      "romanji": "Nihongo",
+      "german": "Japanisch",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "ねこ",
+      "sound": "ね￢こ",
+      "romanji": "neko",
+      "german": "Katze",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "はい",
+      "sound": "は￢い",
+      "romanji": "hai",
+      "german": "ja",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "ひらがな",
+      "sound": "ひらが￢な",
+      "romanji": "hiragana",
+      "german": "Hiragana",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "ひる",
+      "sound": "ひる￢",
+      "romanji": "hiru",
+      "german": "Mittag",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "ふじさん",
+      "sound": "ふ￢じさん",
+      "romanji": "Fujisan",
+      "german": "Berg Fuji",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "ほん",
+      "sound": "ほ￢ん",
+      "romanji": "hon",
+      "german": "Buch",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "やさい",
+      "sound": "やさい￣",
+      "romanji": "yasai",
+      "german": "Gemüse",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "やま",
+      "sound": "やま￢ ",
+      "romanji": "yama",
+      "german": "Berg",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "よる",
+      "sound": "よ￢る",
+      "romanji": "yoru",
+      "german": "Abend, Nacht",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "れい",
+      "sound": "れ￢い",
+      "romanji": "ree",
+      "german": "Beispiel",
+      "chapter": 1,
+      "number": 1
+     },
+     {
+      "kana": "アメリカ",
+      "sound": "アメリカ￣",
+      "romanji": "Amerika",
+      "german": "Amerika\/ USA",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "イギリス",
+      "sound": "イギリス￣",
+      "romanji": "Igirisu",
+      "german": "England, Großbritannien",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "イタリア",
+      "sound": "イタリア￣",
+      "romanji": "Itaria",
+      "german": "Italien",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "インド",
+      "sound": "イ￢ンド",
+      "romanji": "Indo",
+      "german": "Indien",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "インドネシア",
+      "sound": "インドネ￢シア",
+      "romanji": "Indoneshia",
+      "german": "Indonesien",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "エアコン",
+      "sound": "エアコン￣",
+      "romanji": "eakon",
+      "german": "Klimaanlage",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "エジプト",
+      "sound": "エジプト￣",
+      "romanji": "Ejiputo",
+      "german": "Ägypten",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "オーストラリア",
+      "sound": "オーストラ￢リア",
+      "romanji": "Oosutoraria",
+      "german": "Australien",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "カタカナ",
+      "sound": "カタカ￢ナ",
+      "romanji": "katakana",
+      "german": "Katakana",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "カナダ",
+      "sound": "カ￢ナダ",
+      "romanji": "Kanada",
+      "german": "Kanada",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "カメラ",
+      "sound": "カ￢メラ ",
+      "romanji": "kamera",
+      "german": "Kamera",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "カラオケ",
+      "sound": "カラオケ￣",
+      "romanji": "karaoke",
+      "german": "Karaoke",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "クアラルンプール",
+      "sound": "クアラルンプ￢ール",
+      "romanji": "Kuararunpuuru",
+      "german": "Kuala Lumpur",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "くに",
+      "sound": "くに￣、～くに￢",
+      "romanji": "kuni",
+      "german": "Land, Staat",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "コーヒー",
+      "sound": "コーヒ￢ー",
+      "romanji": "koohii",
+      "german": "Kaffee",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "シャツ",
+      "sound": "シャ￢ツ",
+      "romanji": "shatsu",
+      "german": "Shirt",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "シャワー",
+      "sound": "シャ￢ワー",
+      "romanji": "shawaa",
+      "german": "Dusche",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ジュース",
+      "sound": "ジュ￢ース",
+      "romanji": "juusu",
+      "german": "Saft",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "スペイン",
+      "sound": "スペ￢イン",
+      "romanji": "Supein",
+      "german": "Spanien",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ソファ",
+      "sound": "ソ￢ファ",
+      "romanji": "sofa",
+      "german": "Sofa",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "タイ",
+      "sound": "タ￢イ",
+      "romanji": "Tai",
+      "german": "Thailand",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "タクシー",
+      "sound": "タ￢クシー",
+      "romanji": "takushii",
+      "german": "Taxi",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "テーブル",
+      "sound": "テーブル￣",
+      "romanji": "teeburu",
+      "german": "Tisch",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "テレビ",
+      "sound": "テ￢レビ",
+      "romanji": "terebi",
+      "german": "Fernseher",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ドイツ",
+      "sound": "ド￢イツ",
+      "romanji": "Doitsu",
+      "german": "Deutschland",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "トイレ",
+      "sound": "ト￢イレ",
+      "romanji": "toire",
+      "german": "Toilette",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "なまえ",
+      "sound": "なまえ￣",
+      "romanji": "namae",
+      "german": "Name",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "にほん／にっぽん／日本",
+      "sound": "にほ￢ん／にっ￢ぽん",
+      "romanji": "Nihon\/Nippon",
+      "german": "Japan",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "パーティー",
+      "sound": "パ￢ーティー",
+      "romanji": "paathii",
+      "german": "Party",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "パリ",
+      "sound": "パ￢リ",
+      "romanji": "Pari",
+      "german": "Paris",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "パン",
+      "sound": "パ￢ン",
+      "romanji": "pan",
+      "german": "Brot",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ハンガリー",
+      "sound": "ハ￢ンガリー",
+      "romanji": "Hangarii",
+      "german": "Ungarn",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ピアノ",
+      "sound": "ピアノ￣",
+      "romanji": "piano",
+      "german": "Klavier",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "フィリピン",
+      "sound": "フィ￢リピン",
+      "romanji": "Firipin",
+      "german": "Philippinen",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ブラジル",
+      "sound": "ブラジル￣",
+      "romanji": "Burajiru",
+      "german": "Brasilien",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "フランス",
+      "sound": "フランス￣",
+      "romanji": "Furansu",
+      "german": "Frankreich",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ベッド",
+      "sound": "ベ￢ッド",
+      "romanji": "beddo",
+      "german": "Bett",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ベトナム",
+      "sound": "ベトナム￣",
+      "romanji": "Betonamu",
+      "german": "Vietnamm",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ホテル",
+      "sound": "ホ￢テル",
+      "romanji": "hoteru",
+      "german": "Hotel",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "まち",
+      "sound": "まち￢",
+      "romanji": "machi",
+      "german": "Stadt",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "マレーシア",
+      "sound": "マレ￢ーシア",
+      "romanji": "Mareeshia",
+      "german": "Malaysia",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "マンガ",
+      "sound": "マンガ￣",
+      "romanji": "manga",
+      "german": "Manga",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "メキシコ",
+      "sound": "メキシコ￣",
+      "romanji": "Mekishiko",
+      "german": "Mexiko",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "レストラン",
+      "sound": "レ￢ストラン",
+      "romanji": "resutoran",
+      "german": "Restaurant",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "ロシア",
+      "sound": "ロ￢シア",
+      "romanji": "Roshia",
+      "german": "Russland",
+      "chapter": 1,
+      "number": 2
+     },
+     {
+      "kana": "あの／あのう",
+      "sound": "―――",
+      "romanji": "ano\/anoo",
+      "german": "ehm...(Ausdruck, wenn man jemanden anspricht)",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "アラビアご",
+      "sound": "アラビアご￣",
+      "romanji": "Arabiago",
+      "german": "Arabisch",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "えいご",
+      "sound": "えいご￣",
+      "romanji": "eego",
+      "german": "Englisch",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "エンジニア",
+      "sound": "エンジ￢ニア",
+      "romanji": "enjinia",
+      "german": "Ingenieur",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "おくに（くに）",
+      "sound": "おくに￣",
+      "romanji": "okuni(kuni)",
+      "german": "Land, Staat",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "おしごと（しごと）",
+      "sound": "おし￢ごと",
+      "romanji": "oshigoto(shigoto)",
+      "german": "Gast\/ Kunde\/ meine Dame, mein Herr (Anrede für Kunden im Service)",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "かいしゃいん",
+      "sound": "かいしゃ￢いん",
+      "romanji": "kaishain",
+      "german": "Angestellte\/r",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "がくせい",
+      "sound": "がくせい￣",
+      "romanji": "gakusee",
+      "german": "Student\/in",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "かんこく",
+      "sound": "か￢んこく",
+      "romanji": "Kankoku",
+      "german": "Südkorea",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "かんこくご",
+      "sound": "かんこくご￣",
+      "romanji": "Kankokugo",
+      "german": "Koreanisch",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "きょうし",
+      "sound": "きょ￢うし",
+      "romanji": "kyooshi",
+      "german": "Lehrer\/in",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "こうむいん",
+      "sound": "こうむ￢いん",
+      "romanji": "koomuin",
+      "german": "Beamte\/r",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "ことば",
+      "sound": "ことば￢",
+      "romanji": "kotoba",
+      "german": "Sprache\/ Wort",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "さん／～さん",
+      "sound": "―――",
+      "romanji": "~san",
+      "german": "Herr\/Frau (Anredesuffix)",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "じこしょうかい",
+      "sound": "じこしょ￢うかい",
+      "romanji": "jiko-shookai",
+      "german": "Arbeit",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "しゅふ",
+      "sound": "しゅ￢ふ",
+      "romanji": "shufu",
+      "german": "Hausfrau\/ mann",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "じん／～じん",
+      "sound": "～￢じん",
+      "romanji": "~jin",
+      "german": "~er (Suffix für die Nationalität)",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "すごい",
+      "sound": "すご￢い ",
+      "romanji": "sugoi",
+      "german": "toll, extrem",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "すこし",
+      "sound": "すこ￢し",
+      "romanji": "sukoshi",
+      "german": "bißchen",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "せんせい",
+      "sound": "せんせ￢い",
+      "romanji": "sensee",
+      "german": "Lehrer\/in",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "ちゅうごく",
+      "sound": "ちゅ￢うごく",
+      "romanji": "Chuugoku",
+      "german": "China",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "ちゅうごくご",
+      "sound": "ちゅうごくご￣",
+      "romanji": "Chuugokugo",
+      "german": "Chinesisch",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "ちゅうごくじん",
+      "sound": "ちゅうごく￢じん",
+      "romanji": "Chuugokujin",
+      "german": "Chinese\/in",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "できます",
+      "sound": "できま￢す",
+      "romanji": "dekimasu",
+      "german": "können",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "ドイツご",
+      "sound": "ドイツご￣",
+      "romanji": "Doitsugo",
+      "german": "Deutsch",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "なに／なん",
+      "sound": "な￢に\/な￢ん",
+      "romanji": "nani",
+      "german": "was",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "なにご",
+      "sound": "なにご￣",
+      "romanji": "nanigo",
+      "german": "Sprache",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "にほんじん",
+      "sound": "にほんじ￢ん",
+      "romanji": "Nihonjin",
+      "german": "Japaner\/in",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "ふたり",
+      "sound": "ふたり￢",
+      "romanji": "futari",
+      "german": "zwei Personen",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "フランスご",
+      "sound": "フランスご￣",
+      "romanji": "Furansugo",
+      "german": "Frnzösisch",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "フランスじん",
+      "sound": "フランス￢じん",
+      "romanji": "Furansujin",
+      "german": "Franzose\/ in",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "マレーシアじん",
+      "sound": "マレーシア￢じん",
+      "romanji": "Mareeshiajin",
+      "german": "Malaye\/in",
+      "chapter": 2,
+      "number": 3
+     },
+     {
+      "kana": "わたし",
+      "sound": "わたし￣",
+      "romanji": "watashi",
+      "german": "ich",
+      "chapter": 2,
+      "number": 3
+     }
+]

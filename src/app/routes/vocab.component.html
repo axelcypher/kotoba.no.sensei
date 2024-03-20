@@ -1,0 +1,55 @@
+
+  <div class="content">
+      <div class="buttonSwatch">
+        <div [formGroup]="learningModeControl" class="mb-3 input-group">
+            <button type="button" id="kanaButton" name="kanaButton" class="btn btn-outline-secondary" (click)="changeLearningMode()" >kana</button>
+            <button type="button" id="kanjiButton" name="romanjiButton" class="btn btn-outline-secondary" (click)="changeLearningMode()" >kanji</button>
+        </div>
+        <div style="width: 20px"></div>
+        <div [formGroup]="vocabModeControl" class="mb-3 input-group">
+            <button type="button" id="kanaButton" name="kanaButton" class="btn btn-outline-secondary" (click)="changeVocabMode()" >かな</button>
+            <button type="button" id="romanjiButton" name="romanjiButton" class="btn btn-outline-secondary" (click)="changeVocabMode()" >romanji</button>
+        </div>
+      </div>
+      <h1> </h1>
+      <p id="chapter-overview">Kapitel 1 - 1</p>
+      <div class="progress progress-center" role="progressbar" aria-label="Basic example" aria-valuenow="30%" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 30%">30%</div>
+      </div>
+      
+      <p class="subtextRank">Fach 1</p>
+      <div class="score-container">
+
+              <div class="score-circle"></div>
+
+      </div>
+
+      
+          <p id="kana-word" data-hover-text="Romanji"></p>
+              ABC
+              <p class="tab-romanji" style="height: 8px;">XYZ</p>
+
+              <input [formControl]="vocabControl" type="text" id="userInput" name="userInput" placeholder="" required autocomplete="off" (keydown.enter)="submitVocab()">
+      
+        
+
+      <p>Gib deine Antwort hier ein und bestätige deine Eingabe mit der ⏎ Returntaste.</p>
+
+
+          <p id="feedbackMessage"></p>
+
+      
+  </div>
+
+
+<script>
+document.getElementById("userInput").focus();
+</script>
+<script>
+setTimeout(function() {
+  var feedbackMessage = document.getElementById('feedbackMessage');
+  if (feedbackMessage) {
+      feedbackMessage.style.display = 'none';
+  }
+}, 2000);
+</script>
