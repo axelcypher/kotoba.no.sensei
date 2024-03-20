@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,21 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.sass'
 })
  
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'kotoba.no.sensei';
-}
+
+  constructor(private router: Router){}
+
+  ngOnInit() {}
+
+  changeRoute(evt: MouseEvent, name: string) {
+    evt.preventDefault();
+
+    let navcfg = [name]
+
+    this.router.navigate(navcfg, {
+      skipLocationChange: false,
+    })
+   
+  }
+} 
