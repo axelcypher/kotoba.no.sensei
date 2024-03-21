@@ -1,7 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
 import { CookiesService } from './cookie.service'; 
-import { DatabaseService } from './db.service'; 
-
 
 import vocabularyData  from '../../assets/vocabulary.json';
 import userData from '../../assets/userData.json';
@@ -44,7 +42,7 @@ export class VocabularyService implements OnInit {
   public lastVocab: Vocabulary | null = null;
 
 
-  constructor(private cookiesService: CookiesService, private dbService: DatabaseService) {} 
+  constructor(private cookiesService: CookiesService) {} 
   
   ngOnInit(): void {
     // You can now use the dbService to interact with your SQLite database
