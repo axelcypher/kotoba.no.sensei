@@ -3,7 +3,7 @@
       "kana": "あさ",
       "sound": "あ￢さ",
       "romanji": "asa",
-      "german": "Morgen",
+      "translated": "Morgen",
       "chapter": 1,
       "number": 1
      },
@@ -11,7 +11,7 @@
       "kana": "いいえ",
       "sound": "いいえ￢",
       "romanji": "iie",
-      "german": "nein (nicht doch, nicht der Rede Wert)",
+      "translated": "nein (nicht doch, nicht der Rede Wert)",
       "chapter": 1,
       "number": 1
      },
@@ -19,7 +19,7 @@
       "kana": "いえ",
       "sound": "いえ￢",
       "romanji": "ie",
-      "german": "Haus",
+      "translated": "Haus",
       "chapter": 1,
       "number": 1
      },
@@ -27,7 +27,7 @@
       "kana": "いす",
       "sound": "いす￣",
       "romanji": "isu",
-      "german": "Stuhl",
+      "translated": "Stuhl",
       "chapter": 1,
       "number": 1
      },
@@ -35,7 +35,7 @@
       "kana": "いぬ ",
       "sound": "いぬ￢",
       "romanji": "inu",
-      "german": "Hund",
+      "translated": "Hund",
       "chapter": 1,
       "number": 1
      },
@@ -43,7 +43,7 @@
       "kana": "うみ",
       "sound": "う￢み",
       "romanji": "umi ",
-      "german": "Meer",
+      "translated": "Meer",
       "chapter": 1,
       "number": 1
      },
@@ -51,7 +51,7 @@
       "kana": "おちゃ（ちゃ)",
       "sound": "おちゃ￣ ",
       "romanji": "ocha(cha)",
-      "german": "(grüner) Tee",
+      "translated": "(grüner) Tee",
       "chapter": 1,
       "number": 1
      },
@@ -59,7 +59,7 @@
       "kana": "かぞく",
       "sound": "か￢ぞく",
       "romanji": "kazoku",
-      "german": "Familie",
+      "translated": "Familie",
       "chapter": 1,
       "number": 1
      },
@@ -67,7 +67,7 @@
       "kana": "ご／～ご",
       "sound": "～ご￣ ",
       "romanji": "～go",
-      "german": "-isch (Suffix für die Sprache)",
+      "translated": "-isch (Suffix für die Sprache)",
       "chapter": 1,
       "number": 1
      },
@@ -75,7 +75,7 @@
       "kana": "さかな／魚",
       "sound": "さかな￣",
       "romanji": "sakana",
-      "german": "Fisch",
+      "translated": "Fisch",
       "chapter": 1,
       "number": 1
      },
@@ -83,7 +83,7 @@
       "kana": "ざっし",
       "sound": "ざっし￣",
       "romanji": "zasshi",
-      "german": "Zeitschrift",
+      "translated": "Zeitschrift",
       "chapter": 1,
       "number": 1
      },
@@ -91,7 +91,7 @@
       "kana": "そら",
       "sound": "そ￢ら",
       "romanji": "sora",
-      "german": "Himmel",
+      "translated": "Himmel",
       "chapter": 1,
       "number": 1
      },
@@ -99,7 +99,7 @@
       "kana": "卵",
       "sound": "たま￢ご",
       "romanji": "tamago",
-      "german": "Ei",
+      "translated": "Ei",
       "chapter": 1,
       "number": 1
      },
@@ -107,7 +107,7 @@
       "kana": "つくえ",
       "sound": "つくえ￣",
       "romanji": "tsukue",
-      "german": "Schreibtisch",
+      "translated": "Schreibtisch",
       "chapter": 1,
       "number": 1
      },
@@ -115,7 +115,7 @@
       "kana": "てんぷら",
       "sound": "てんぷら￣",
       "romanji": "tenpura",
-      "german": "Tempura",
+      "translated": "Tempura",
       "chapter": 1,
       "number": 1
      },
@@ -123,7 +123,7 @@
       "kana": "とうきょう／東京",
       "sound": "とうきょう￣",
       "romanji": "Tookyoo",
-      "german": "Tokyo",
+      "translated": "Tokyo",
       "chapter": 1,
       "number": 1
      },
@@ -131,7 +131,7 @@
       "kana": "とけい",
       "sound": "とけい￣",
       "romanji": "tokee",
-      "german": "Uhr",
+      "translated": "Uhr",
       "chapter": 1,
       "number": 1
      },
@@ -139,7 +139,7 @@
       "kana": "にほんご",
       "sound": "にほんご￣",
       "romanji": "Nihongo",
-      "german": "Japanisch",
+      "translated": "Japanisch",
       "chapter": 1,
       "number": 1
      },
@@ -147,7 +147,7 @@
       "kana": "ねこ",
       "sound": "ね￢こ",
       "romanji": "neko",
-      "german": "Katze",
+      "translated": "Katze",
       "chapter": 1,
       "number": 1
      },
@@ -155,7 +155,7 @@
       "kana": "はい",
       "sound": "は￢い",
       "romanji": "hai",
-      "german": "ja",
+      "translated": "ja",
       "chapter": 1,
       "number": 1
      },
@@ -163,7 +163,7 @@
       "kana": "ひらがな",
       "sound": "ひらが￢な",
       "romanji": "hiragana",
-      "german": "Hiragana",
+      "translated": "Hiragana",
       "chapter": 1,
       "number": 1
      },
@@ -171,7 +171,7 @@
       "kana": "ひる",
       "sound": "ひる￢",
       "romanji": "hiru",
-      "german": "Mittag",
+      "translated": "Mittag",
       "chapter": 1,
       "number": 1
      },
@@ -179,7 +179,7 @@
       "kana": "ふじさん",
       "sound": "ふ￢じさん",
       "romanji": "Fujisan",
-      "german": "Berg Fuji",
+      "translated": "Berg Fuji",
       "chapter": 1,
       "number": 1
      },
@@ -187,7 +187,7 @@
       "kana": "ほん",
       "sound": "ほ￢ん",
       "romanji": "hon",
-      "german": "Buch",
+      "translated": "Buch",
       "chapter": 1,
       "number": 1
      },
@@ -195,7 +195,7 @@
       "kana": "やさい",
       "sound": "やさい￣",
       "romanji": "yasai",
-      "german": "Gemüse",
+      "translated": "Gemüse",
       "chapter": 1,
       "number": 1
      },
@@ -203,7 +203,7 @@
       "kana": "やま",
       "sound": "やま￢ ",
       "romanji": "yama",
-      "german": "Berg",
+      "translated": "Berg",
       "chapter": 1,
       "number": 1
      },
@@ -211,7 +211,7 @@
       "kana": "よる",
       "sound": "よ￢る",
       "romanji": "yoru",
-      "german": "Abend, Nacht",
+      "translated": "Abend, Nacht",
       "chapter": 1,
       "number": 1
      },
@@ -219,7 +219,7 @@
       "kana": "れい",
       "sound": "れ￢い",
       "romanji": "ree",
-      "german": "Beispiel",
+      "translated": "Beispiel",
       "chapter": 1,
       "number": 1
      },
@@ -227,7 +227,7 @@
       "kana": "アメリカ",
       "sound": "アメリカ￣",
       "romanji": "Amerika",
-      "german": "Amerika\/ USA",
+      "translated": "Amerika\/ USA",
       "chapter": 1,
       "number": 2
      },
@@ -235,7 +235,7 @@
       "kana": "イギリス",
       "sound": "イギリス￣",
       "romanji": "Igirisu",
-      "german": "England, Großbritannien",
+      "translated": "England, Großbritannien",
       "chapter": 1,
       "number": 2
      },
@@ -243,7 +243,7 @@
       "kana": "イタリア",
       "sound": "イタリア￣",
       "romanji": "Itaria",
-      "german": "Italien",
+      "translated": "Italien",
       "chapter": 1,
       "number": 2
      },
@@ -251,7 +251,7 @@
       "kana": "インド",
       "sound": "イ￢ンド",
       "romanji": "Indo",
-      "german": "Indien",
+      "translated": "Indien",
       "chapter": 1,
       "number": 2
      },
@@ -259,7 +259,7 @@
       "kana": "インドネシア",
       "sound": "インドネ￢シア",
       "romanji": "Indoneshia",
-      "german": "Indonesien",
+      "translated": "Indonesien",
       "chapter": 1,
       "number": 2
      },
@@ -267,7 +267,7 @@
       "kana": "エアコン",
       "sound": "エアコン￣",
       "romanji": "eakon",
-      "german": "Klimaanlage",
+      "translated": "Klimaanlage",
       "chapter": 1,
       "number": 2
      },
@@ -275,7 +275,7 @@
       "kana": "エジプト",
       "sound": "エジプト￣",
       "romanji": "Ejiputo",
-      "german": "Ägypten",
+      "translated": "Ägypten",
       "chapter": 1,
       "number": 2
      },
@@ -283,7 +283,7 @@
       "kana": "オーストラリア",
       "sound": "オーストラ￢リア",
       "romanji": "Oosutoraria",
-      "german": "Australien",
+      "translated": "Australien",
       "chapter": 1,
       "number": 2
      },
@@ -291,7 +291,7 @@
       "kana": "カタカナ",
       "sound": "カタカ￢ナ",
       "romanji": "katakana",
-      "german": "Katakana",
+      "translated": "Katakana",
       "chapter": 1,
       "number": 2
      },
@@ -299,7 +299,7 @@
       "kana": "カナダ",
       "sound": "カ￢ナダ",
       "romanji": "Kanada",
-      "german": "Kanada",
+      "translated": "Kanada",
       "chapter": 1,
       "number": 2
      },
@@ -307,7 +307,7 @@
       "kana": "カメラ",
       "sound": "カ￢メラ ",
       "romanji": "kamera",
-      "german": "Kamera",
+      "translated": "Kamera",
       "chapter": 1,
       "number": 2
      },
@@ -315,7 +315,7 @@
       "kana": "カラオケ",
       "sound": "カラオケ￣",
       "romanji": "karaoke",
-      "german": "Karaoke",
+      "translated": "Karaoke",
       "chapter": 1,
       "number": 2
      },
@@ -323,7 +323,7 @@
       "kana": "クアラルンプール",
       "sound": "クアラルンプ￢ール",
       "romanji": "Kuararunpuuru",
-      "german": "Kuala Lumpur",
+      "translated": "Kuala Lumpur",
       "chapter": 1,
       "number": 2
      },
@@ -331,7 +331,7 @@
       "kana": "くに",
       "sound": "くに￣、～くに￢",
       "romanji": "kuni",
-      "german": "Land, Staat",
+      "translated": "Land, Staat",
       "chapter": 1,
       "number": 2
      },
@@ -339,7 +339,7 @@
       "kana": "コーヒー",
       "sound": "コーヒ￢ー",
       "romanji": "koohii",
-      "german": "Kaffee",
+      "translated": "Kaffee",
       "chapter": 1,
       "number": 2
      },
@@ -347,7 +347,7 @@
       "kana": "シャツ",
       "sound": "シャ￢ツ",
       "romanji": "shatsu",
-      "german": "Shirt",
+      "translated": "Shirt",
       "chapter": 1,
       "number": 2
      },
@@ -355,7 +355,7 @@
       "kana": "シャワー",
       "sound": "シャ￢ワー",
       "romanji": "shawaa",
-      "german": "Dusche",
+      "translated": "Dusche",
       "chapter": 1,
       "number": 2
      },
@@ -363,7 +363,7 @@
       "kana": "ジュース",
       "sound": "ジュ￢ース",
       "romanji": "juusu",
-      "german": "Saft",
+      "translated": "Saft",
       "chapter": 1,
       "number": 2
      },
@@ -371,7 +371,7 @@
       "kana": "スペイン",
       "sound": "スペ￢イン",
       "romanji": "Supein",
-      "german": "Spanien",
+      "translated": "Spanien",
       "chapter": 1,
       "number": 2
      },
@@ -379,7 +379,7 @@
       "kana": "ソファ",
       "sound": "ソ￢ファ",
       "romanji": "sofa",
-      "german": "Sofa",
+      "translated": "Sofa",
       "chapter": 1,
       "number": 2
      },
@@ -387,7 +387,7 @@
       "kana": "タイ",
       "sound": "タ￢イ",
       "romanji": "Tai",
-      "german": "Thailand",
+      "translated": "Thailand",
       "chapter": 1,
       "number": 2
      },
@@ -395,7 +395,7 @@
       "kana": "タクシー",
       "sound": "タ￢クシー",
       "romanji": "takushii",
-      "german": "Taxi",
+      "translated": "Taxi",
       "chapter": 1,
       "number": 2
      },
@@ -403,7 +403,7 @@
       "kana": "テーブル",
       "sound": "テーブル￣",
       "romanji": "teeburu",
-      "german": "Tisch",
+      "translated": "Tisch",
       "chapter": 1,
       "number": 2
      },
@@ -411,7 +411,7 @@
       "kana": "テレビ",
       "sound": "テ￢レビ",
       "romanji": "terebi",
-      "german": "Fernseher",
+      "translated": "Fernseher",
       "chapter": 1,
       "number": 2
      },
@@ -419,7 +419,7 @@
       "kana": "ドイツ",
       "sound": "ド￢イツ",
       "romanji": "Doitsu",
-      "german": "Deutschland",
+      "translated": "Deutschland",
       "chapter": 1,
       "number": 2
      },
@@ -427,7 +427,7 @@
       "kana": "トイレ",
       "sound": "ト￢イレ",
       "romanji": "toire",
-      "german": "Toilette",
+      "translated": "Toilette",
       "chapter": 1,
       "number": 2
      },
@@ -435,7 +435,7 @@
       "kana": "なまえ",
       "sound": "なまえ￣",
       "romanji": "namae",
-      "german": "Name",
+      "translated": "Name",
       "chapter": 1,
       "number": 2
      },
@@ -443,7 +443,7 @@
       "kana": "にほん／にっぽん／日本",
       "sound": "にほ￢ん／にっ￢ぽん",
       "romanji": "Nihon\/Nippon",
-      "german": "Japan",
+      "translated": "Japan",
       "chapter": 1,
       "number": 2
      },
@@ -451,7 +451,7 @@
       "kana": "パーティー",
       "sound": "パ￢ーティー",
       "romanji": "paathii",
-      "german": "Party",
+      "translated": "Party",
       "chapter": 1,
       "number": 2
      },
@@ -459,7 +459,7 @@
       "kana": "パリ",
       "sound": "パ￢リ",
       "romanji": "Pari",
-      "german": "Paris",
+      "translated": "Paris",
       "chapter": 1,
       "number": 2
      },
@@ -467,7 +467,7 @@
       "kana": "パン",
       "sound": "パ￢ン",
       "romanji": "pan",
-      "german": "Brot",
+      "translated": "Brot",
       "chapter": 1,
       "number": 2
      },
@@ -475,7 +475,7 @@
       "kana": "ハンガリー",
       "sound": "ハ￢ンガリー",
       "romanji": "Hangarii",
-      "german": "Ungarn",
+      "translated": "Ungarn",
       "chapter": 1,
       "number": 2
      },
@@ -483,7 +483,7 @@
       "kana": "ピアノ",
       "sound": "ピアノ￣",
       "romanji": "piano",
-      "german": "Klavier",
+      "translated": "Klavier",
       "chapter": 1,
       "number": 2
      },
@@ -491,7 +491,7 @@
       "kana": "フィリピン",
       "sound": "フィ￢リピン",
       "romanji": "Firipin",
-      "german": "Philippinen",
+      "translated": "Philippinen",
       "chapter": 1,
       "number": 2
      },
@@ -499,7 +499,7 @@
       "kana": "ブラジル",
       "sound": "ブラジル￣",
       "romanji": "Burajiru",
-      "german": "Brasilien",
+      "translated": "Brasilien",
       "chapter": 1,
       "number": 2
      },
@@ -507,7 +507,7 @@
       "kana": "フランス",
       "sound": "フランス￣",
       "romanji": "Furansu",
-      "german": "Frankreich",
+      "translated": "Frankreich",
       "chapter": 1,
       "number": 2
      },
@@ -515,7 +515,7 @@
       "kana": "ベッド",
       "sound": "ベ￢ッド",
       "romanji": "beddo",
-      "german": "Bett",
+      "translated": "Bett",
       "chapter": 1,
       "number": 2
      },
@@ -523,7 +523,7 @@
       "kana": "ベトナム",
       "sound": "ベトナム￣",
       "romanji": "Betonamu",
-      "german": "Vietnamm",
+      "translated": "Vietnamm",
       "chapter": 1,
       "number": 2
      },
@@ -531,7 +531,7 @@
       "kana": "ホテル",
       "sound": "ホ￢テル",
       "romanji": "hoteru",
-      "german": "Hotel",
+      "translated": "Hotel",
       "chapter": 1,
       "number": 2
      },
@@ -539,7 +539,7 @@
       "kana": "まち",
       "sound": "まち￢",
       "romanji": "machi",
-      "german": "Stadt",
+      "translated": "Stadt",
       "chapter": 1,
       "number": 2
      },
@@ -547,7 +547,7 @@
       "kana": "マレーシア",
       "sound": "マレ￢ーシア",
       "romanji": "Mareeshia",
-      "german": "Malaysia",
+      "translated": "Malaysia",
       "chapter": 1,
       "number": 2
      },
@@ -555,7 +555,7 @@
       "kana": "マンガ",
       "sound": "マンガ￣",
       "romanji": "manga",
-      "german": "Manga",
+      "translated": "Manga",
       "chapter": 1,
       "number": 2
      },
@@ -563,7 +563,7 @@
       "kana": "メキシコ",
       "sound": "メキシコ￣",
       "romanji": "Mekishiko",
-      "german": "Mexiko",
+      "translated": "Mexiko",
       "chapter": 1,
       "number": 2
      },
@@ -571,7 +571,7 @@
       "kana": "レストラン",
       "sound": "レ￢ストラン",
       "romanji": "resutoran",
-      "german": "Restaurant",
+      "translated": "Restaurant",
       "chapter": 1,
       "number": 2
      },
@@ -579,7 +579,7 @@
       "kana": "ロシア",
       "sound": "ロ￢シア",
       "romanji": "Roshia",
-      "german": "Russland",
+      "translated": "Russland",
       "chapter": 1,
       "number": 2
      },
@@ -587,7 +587,7 @@
       "kana": "あの／あのう",
       "sound": "―――",
       "romanji": "ano\/anoo",
-      "german": "ehm...(Ausdruck, wenn man jemanden anspricht)",
+      "translated": "ehm...(Ausdruck, wenn man jemanden anspricht)",
       "chapter": 2,
       "number": 3
      },
@@ -595,7 +595,7 @@
       "kana": "アラビアご",
       "sound": "アラビアご￣",
       "romanji": "Arabiago",
-      "german": "Arabisch",
+      "translated": "Arabisch",
       "chapter": 2,
       "number": 3
      },
@@ -603,7 +603,7 @@
       "kana": "えいご",
       "sound": "えいご￣",
       "romanji": "eego",
-      "german": "Englisch",
+      "translated": "Englisch",
       "chapter": 2,
       "number": 3
      },
@@ -611,7 +611,7 @@
       "kana": "エンジニア",
       "sound": "エンジ￢ニア",
       "romanji": "enjinia",
-      "german": "Ingenieur",
+      "translated": "Ingenieur",
       "chapter": 2,
       "number": 3
      },
@@ -619,7 +619,7 @@
       "kana": "おくに（くに）",
       "sound": "おくに￣",
       "romanji": "okuni(kuni)",
-      "german": "Land, Staat",
+      "translated": "Land, Staat",
       "chapter": 2,
       "number": 3
      },
@@ -627,7 +627,7 @@
       "kana": "おしごと（しごと）",
       "sound": "おし￢ごと",
       "romanji": "oshigoto(shigoto)",
-      "german": "Gast\/ Kunde\/ meine Dame, mein Herr (Anrede für Kunden im Service)",
+      "translated": "Gast\/ Kunde\/ meine Dame, mein Herr (Anrede für Kunden im Service)",
       "chapter": 2,
       "number": 3
      },
@@ -635,7 +635,7 @@
       "kana": "かいしゃいん",
       "sound": "かいしゃ￢いん",
       "romanji": "kaishain",
-      "german": "Angestellte\/r",
+      "translated": "Angestellte\/r",
       "chapter": 2,
       "number": 3
      },
@@ -643,7 +643,7 @@
       "kana": "がくせい",
       "sound": "がくせい￣",
       "romanji": "gakusee",
-      "german": "Student\/in",
+      "translated": "Student\/in",
       "chapter": 2,
       "number": 3
      },
@@ -651,7 +651,7 @@
       "kana": "かんこく",
       "sound": "か￢んこく",
       "romanji": "Kankoku",
-      "german": "Südkorea",
+      "translated": "Südkorea",
       "chapter": 2,
       "number": 3
      },
@@ -659,7 +659,7 @@
       "kana": "かんこくご",
       "sound": "かんこくご￣",
       "romanji": "Kankokugo",
-      "german": "Koreanisch",
+      "translated": "Koreanisch",
       "chapter": 2,
       "number": 3
      },
@@ -667,7 +667,7 @@
       "kana": "きょうし",
       "sound": "きょ￢うし",
       "romanji": "kyooshi",
-      "german": "Lehrer\/in",
+      "translated": "Lehrer\/in",
       "chapter": 2,
       "number": 3
      },
@@ -675,7 +675,7 @@
       "kana": "こうむいん",
       "sound": "こうむ￢いん",
       "romanji": "koomuin",
-      "german": "Beamte\/r",
+      "translated": "Beamte\/r",
       "chapter": 2,
       "number": 3
      },
@@ -683,7 +683,7 @@
       "kana": "ことば",
       "sound": "ことば￢",
       "romanji": "kotoba",
-      "german": "Sprache\/ Wort",
+      "translated": "Sprache\/ Wort",
       "chapter": 2,
       "number": 3
      },
@@ -691,7 +691,7 @@
       "kana": "さん／～さん",
       "sound": "―――",
       "romanji": "~san",
-      "german": "Herr\/Frau (Anredesuffix)",
+      "translated": "Herr\/Frau (Anredesuffix)",
       "chapter": 2,
       "number": 3
      },
@@ -699,7 +699,7 @@
       "kana": "じこしょうかい",
       "sound": "じこしょ￢うかい",
       "romanji": "jiko-shookai",
-      "german": "Arbeit",
+      "translated": "Arbeit",
       "chapter": 2,
       "number": 3
      },
@@ -707,7 +707,7 @@
       "kana": "しゅふ",
       "sound": "しゅ￢ふ",
       "romanji": "shufu",
-      "german": "Hausfrau\/ mann",
+      "translated": "Hausfrau\/ mann",
       "chapter": 2,
       "number": 3
      },
@@ -715,7 +715,7 @@
       "kana": "じん／～じん",
       "sound": "～￢じん",
       "romanji": "~jin",
-      "german": "~er (Suffix für die Nationalität)",
+      "translated": "~er (Suffix für die Nationalität)",
       "chapter": 2,
       "number": 3
      },
@@ -723,7 +723,7 @@
       "kana": "すごい",
       "sound": "すご￢い ",
       "romanji": "sugoi",
-      "german": "toll, extrem",
+      "translated": "toll, extrem",
       "chapter": 2,
       "number": 3
      },
@@ -731,7 +731,7 @@
       "kana": "すこし",
       "sound": "すこ￢し",
       "romanji": "sukoshi",
-      "german": "bißchen",
+      "translated": "bißchen",
       "chapter": 2,
       "number": 3
      },
@@ -739,7 +739,7 @@
       "kana": "せんせい",
       "sound": "せんせ￢い",
       "romanji": "sensee",
-      "german": "Lehrer\/in",
+      "translated": "Lehrer\/in",
       "chapter": 2,
       "number": 3
      },
@@ -747,7 +747,7 @@
       "kana": "ちゅうごく",
       "sound": "ちゅ￢うごく",
       "romanji": "Chuugoku",
-      "german": "China",
+      "translated": "China",
       "chapter": 2,
       "number": 3
      },
@@ -755,7 +755,7 @@
       "kana": "ちゅうごくご",
       "sound": "ちゅうごくご￣",
       "romanji": "Chuugokugo",
-      "german": "Chinesisch",
+      "translated": "Chinesisch",
       "chapter": 2,
       "number": 3
      },
@@ -763,7 +763,7 @@
       "kana": "ちゅうごくじん",
       "sound": "ちゅうごく￢じん",
       "romanji": "Chuugokujin",
-      "german": "Chinese\/in",
+      "translated": "Chinese\/in",
       "chapter": 2,
       "number": 3
      },
@@ -771,7 +771,7 @@
       "kana": "できます",
       "sound": "できま￢す",
       "romanji": "dekimasu",
-      "german": "können",
+      "translated": "können",
       "chapter": 2,
       "number": 3
      },
@@ -779,7 +779,7 @@
       "kana": "ドイツご",
       "sound": "ドイツご￣",
       "romanji": "Doitsugo",
-      "german": "Deutsch",
+      "translated": "Deutsch",
       "chapter": 2,
       "number": 3
      },
@@ -787,7 +787,7 @@
       "kana": "なに／なん",
       "sound": "な￢に\/な￢ん",
       "romanji": "nani",
-      "german": "was",
+      "translated": "was",
       "chapter": 2,
       "number": 3
      },
@@ -795,7 +795,7 @@
       "kana": "なにご",
       "sound": "なにご￣",
       "romanji": "nanigo",
-      "german": "Sprache",
+      "translated": "Sprache",
       "chapter": 2,
       "number": 3
      },
@@ -803,7 +803,7 @@
       "kana": "にほんじん",
       "sound": "にほんじ￢ん",
       "romanji": "Nihonjin",
-      "german": "Japaner\/in",
+      "translated": "Japaner\/in",
       "chapter": 2,
       "number": 3
      },
@@ -811,7 +811,7 @@
       "kana": "ふたり",
       "sound": "ふたり￢",
       "romanji": "futari",
-      "german": "zwei Personen",
+      "translated": "zwei Personen",
       "chapter": 2,
       "number": 3
      },
@@ -819,7 +819,7 @@
       "kana": "フランスご",
       "sound": "フランスご￣",
       "romanji": "Furansugo",
-      "german": "Frnzösisch",
+      "translated": "Frnzösisch",
       "chapter": 2,
       "number": 3
      },
@@ -827,7 +827,7 @@
       "kana": "フランスじん",
       "sound": "フランス￢じん",
       "romanji": "Furansujin",
-      "german": "Franzose\/ in",
+      "translated": "Franzose\/ in",
       "chapter": 2,
       "number": 3
      },
@@ -835,7 +835,7 @@
       "kana": "マレーシアじん",
       "sound": "マレーシア￢じん",
       "romanji": "Mareeshiajin",
-      "german": "Malaye\/in",
+      "translated": "Malaye\/in",
       "chapter": 2,
       "number": 3
      },
@@ -843,7 +843,7 @@
       "kana": "わたし",
       "sound": "わたし￣",
       "romanji": "watashi",
-      "german": "ich",
+      "translated": "ich",
       "chapter": 2,
       "number": 3
      }

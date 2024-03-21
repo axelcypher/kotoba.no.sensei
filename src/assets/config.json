@@ -1,3 +1,10 @@
 {
-    "port": 8069 
+    "port": 8069,
+    "appSettings": {
+        "defaultRanksCount": 5,
+        "defaultPointsPerRank": 4,
+        "defaultTheresholdForNumber": 0.8,      
+        "defaultTheresholdForChapter": 0.8,     
+        "defaultVocabCooldown": 480        
+    }
 }

@@ -1,0 +1,46 @@
+
+  <div class="content">
+
+      <div class="buttonSwatch">
+        <div [formGroup]="learningModeControl" class="mb-3 input-group">
+          <button type="button" id="romanjiButton" name="romanjiButton" class="btn btn-outline-secondary" (click)="changeLearningMode()" >romanji</button>
+          <button type="button" id="kanaButton" name="kanaButton" class="btn btn-outline-secondary" (click)="changeLearningMode()" >かな</button>
+          <button type="button" id="kanjiButton" name="kanjiButton" class="btn btn-outline-secondary" (click)="changeLearningMode()" >漢字</button>
+        </div>
+      </div>
+
+      <p class="titleChapter">Kapitel {{progress.chapter}} - {{progress.number}}</p>
+      
+      <div class="progress progress-center" role="progressbar" aria-label="Basic example" [attr.aria-valuenow]=" numberPercent + '%'" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" [ngStyle]="{'width': numberPercent + '%'}">{{numberPercent}} %</div>
+      </div>
+      
+      <p class="subtextRank">Fach </p>
+
+      <div class="score-container">
+              <div class="score-circle"></div>
+      </div> 
+
+      <p id="vocabDisplay" [attr.data-hover-text]='vocabData?.romanji'>{{ vocabData?.kana }}</p>
+      <p class="tab-romanji" style="height: 8px;">{{ vocabData?.romanji }} </p>
+
+      <input [formControl]="vocabControl" type="text" id="userInput" name="userInput" placeholder="" required autocomplete="off" (keydown.enter)="submitVocab()">
+      
+      <p class="commentText">Gib deine Antwort hier ein und bestätige deine Eingabe mit der ⏎ Returntaste.</p>
+      <p id="feedbackMessage" [innerHTML]="feedback"></p>
+
+      
+  </div>
+
+
+<script>
+document.getElementById("userInput").focus();
+</script>
+<script>
+setTimeout(function() {
+  var feedbackMessage = document.getElementById('feedbackMessage');
+  if (feedbackMessage) {
+      feedbackMessage.style.display = 'none';
+  }
+}, 2000);
+</script>

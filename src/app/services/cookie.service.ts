@@ -8,15 +8,13 @@ import { CookieService } from 'ngx-cookie-service';
 export class CookiesService {
   constructor(private cookieService: CookieService) {}
 
-  setSessionCookie(token: string): void {
-    this.cookieService.set('sessionToken', token);
+  setCookie( name: string, token: string ): void {
+    this.cookieService.set(name, token);
   }
-
-  getSessionCookie(): string {
-    return this.cookieService.get('sessionToken');
+  getCookie( token: string ): string {
+    return this.cookieService.get(token);
   }
-
-  clearSessionCookie(): void {
-    this.cookieService.delete('sessionToken');
+  clearCookie( token: string ): void {
+    this.cookieService.delete(token);
   }
 }

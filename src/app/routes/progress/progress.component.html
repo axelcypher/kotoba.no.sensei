@@ -1,0 +1,73 @@
+<div class="content">
+
+<h1>Vokabelliste</h1>
+  
+<div *ngFor="let group of sortAndGroupUserData">
+    <div class="overview-header chapter">
+      <div class="number">
+        <div class="accordion" [attr.id]="'accordionC' + group.chapter ">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      [attr.data-bs-target]="'#collapseC' + group.chapter" aria-expanded="true"
+                      [attr.aria-controls]="'collapseC' + group.chapter">
+                Kapitel {{ group.chapter }}
+              </button>
+            </h2>
+            <div [attr.id]="'collapseC' + group.chapter" class="accordion-collapse collapse show"
+                 [attr.data-bs-parent]="'#accordionC' + group.chapter">
+              <div class="accordion-body" style="padding: 0;">
+                <div *ngFor="let vocab of group.data" class="accordion" [attr.id]="'accordion' + vocab.number">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              [attr.data-bs-target]="'#collapse' + vocab.number" aria-expanded="true"
+                              [attr.aria-controls]="'collapse' + vocab.number">
+                        <p>Nummer {{ vocab.number }}</p>
+                        <div class="inline">
+                          <div class="progress progress-right" role="progressbar"
+                               [ngStyle]="{'width': numberPercent + '%'}">
+                            <div class="progress-bar">{{ numberPercent }}%</div>
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div [attr.id]="'collapse' + vocab.number" class="accordion-collapse collapse show"
+                         [attr.data-bs-parent]="'#accordion' + vocab.number">
+                      <div class="accordion-body" style="padding: 0;">
+                        <div class="grid-container">
+                          <div *ngFor="let vocabulary of vocab.items" class="card"
+                               [ngStyle]="{'width': '18rem'}"
+                               [ngClass]="{'blur-filter': vocabulary.chapter > progress.chapter }">
+                            <div class="card-body">
+                              <h5 class="card-title">{{ vocabulary.kana }}</h5>
+                              <h6 class="card-subtitle mb-2 text-body-secondary subtextRomanji">{{ vocabulary.romanji }}</h6>
+                              <p class="subtextRank">Fach {{ vocabulary.progress?.rank }}</p>
+                              <div class="score-container">
+                                <div *ngFor="let i of [0, 1, 2]" class="score-circle"
+                                     [ngClass]="{'filled': i < (vocabulary.progress?.points || 0) }"></div>
+                              </div>
+                              <p class="card-text"
+                                 [ngClass]="{'blur-filter': vocabulary.chapter > progress.chapter ||
+                                                          (vocabulary.chapter <= progress.chapter && vocabulary.number > progress.number)}">
+                                {{ vocabulary.translated }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+

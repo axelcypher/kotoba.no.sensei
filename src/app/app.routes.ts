@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './routes/home.component';
-import { VocabComponent } from './routes/vocab.component';
-import { KanaComponent } from './routes/kana.component';
-import { SettingsComponent } from './routes/settings.component';
+import { HomeComponent } from './routes/home/home.component';
+import { VocabComponent } from './routes/vocab/vocab.component';
+import { KanaComponent } from './routes/kana/kana.component';
+import { SettingsComponent } from './routes/settings/settings.component';
 
-import { PageNotFoundComponent } from './routes/pagenotfound.component';
-import { ProgressComponent } from './routes/progress.component';
+import { PageNotFoundComponent } from './routes/404/pagenotfound.component';
+import { ProgressComponent } from './routes/progress/progress.component';
 
 //import { AuthGuard } from './services/auth.service';
 
