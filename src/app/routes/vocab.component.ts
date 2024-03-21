@@ -12,6 +12,8 @@ import { FormGroup, ReactiveFormsModule, FormControl } from '@angular/forms';
 }) 
 
 export class VocabComponent {
+  public routerLinkNavVocab = "/vocab"
+
   vocabControl:FormControl = new FormControl(null);
   learningModeControl = new FormGroup({
     kanaButton: new FormControl(''),

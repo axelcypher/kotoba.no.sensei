@@ -1,7 +1,11 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './routes/home.component';
 import { VocabComponent } from './routes/vocab.component';
 import { KanaComponent } from './routes/kana.component';
+import { SettingsComponent } from './routes/settings.component';
+
 import { PageNotFoundComponent } from './routes/pagenotfound.component';
+import { ProgressComponent } from './routes/progress.component';
 
 //import { AuthGuard } from './services/auth.service';
 
@@ -9,12 +13,16 @@ import { PageNotFoundComponent } from './routes/pagenotfound.component';
 
 
 export const APP_ROUTES: Routes = [
-  { path: '**', component: PageNotFoundComponent },
-  {path: '', redirectTo: 'kana', pathMatch: 'full'},
-  { path: 'vocab', component: VocabComponent }, 
-  { path: 'kana', component: KanaComponent },
+  { path: 'home',         redirectTo: '', pathMatch: 'full'     },
+  { path: '',             component: HomeComponent              }, 
+  { path: 'vocab',        component: VocabComponent             }, 
+  { path: 'kana',         component: KanaComponent              },
+  { path: 'progress',     component: ProgressComponent          },
+  { path: 'settings',     component: SettingsComponent          }, 
+  { path: '**',           component: PageNotFoundComponent      },
+
   //{ path: 'settings', component: KanaComponent, canActivate: [AuthGuard] },
 
-  ]; 
+  ];  
  
   

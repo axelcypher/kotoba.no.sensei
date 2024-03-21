@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })
@@ -12,18 +12,18 @@ import { Router, RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'kotoba.no.sensei';
 
+
+
+
   constructor(private router: Router){}
 
   ngOnInit() {}
 
-  changeRoute(evt: MouseEvent, name: string) {
+  navToComponent(evt: MouseEvent, name: string) {
     evt.preventDefault();
-
-    let navcfg = [name]
-
-    this.router.navigate(navcfg, {
-      skipLocationChange: false,
+    this.router.navigate([name], {
+      skipLocationChange: true,
     })
-   
+
   }
 } 
