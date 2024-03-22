@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet, RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,10 +13,8 @@ import { Router, RouterOutlet, RouterModule } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'kotoba.no.sensei';
 
-
-
-
   constructor(private router: Router){}
+
 
   ngOnInit() {}
 
@@ -24,6 +23,7 @@ export class AppComponent implements OnInit {
     this.router.navigate([name], {
       skipLocationChange: true,
     })
-
   }
+
+
 } 

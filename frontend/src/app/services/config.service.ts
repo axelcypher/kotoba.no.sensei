@@ -20,11 +20,16 @@ export class ConfigService {
 
   // This is an example property ... you can make it however you want.
   get port() {
-
     if (!this.appConfig) {
       throw Error('Config file not loaded!');
     }
-
     return this.appConfig.port;
+  }
+  
+  api(): string {
+    if (!this.appConfig) {
+      throw Error('Config file not loaded!');
+    }
+    return this.appConfig.apiURL;
   }
 }

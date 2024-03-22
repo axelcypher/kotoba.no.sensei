@@ -1,13 +1,15 @@
 import { Injectable, OnInit } from '@angular/core';
 import { CookiesService } from './cookie.service'; 
+//import { ApiService } from './api.service';
 
 import vocabularyData  from '../../assets/vocabulary.json';
 import userData from '../../assets/userData.json';
 import config from '../../assets/config.json';
+
 //import userConfig from '../../assets/userConfig.json';
 
 export interface Vocabulary {
-  kana: string;
+  kana: string; 
   sound: string;
   romanji: string;
   translated: string;
@@ -23,8 +25,6 @@ export interface Vocabulary {
   };
 }
 
-
-
 interface GroupedVocabulary {
   chapter: number;
   data: {
@@ -33,14 +33,12 @@ interface GroupedVocabulary {
   }[];
 }
  
-
 @Injectable({
   providedIn: 'root'
 })
 
 export class VocabularyService implements OnInit {
   public lastVocab: Vocabulary | null = null;
-
 
   constructor(private cookiesService: CookiesService) {} 
   
@@ -184,7 +182,9 @@ export class VocabularyService implements OnInit {
 }
 
   saveUserData(userData: Vocabulary): void {
-
+    const endpoint = "/api/v1/updateuserdata/"
+    //let apiService = this.apiService;
+    
     
   }
 

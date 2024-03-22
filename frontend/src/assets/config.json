@@ -1,5 +1,6 @@
 {
     "port": 8069,
+    "apiURL": "http://localhost:5050",
     "appSettings": {
         "defaultRanksCount": 5,
         "defaultPointsPerRank": 4,
