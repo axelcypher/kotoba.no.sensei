@@ -18,7 +18,20 @@
         <a href="#" (click)="navToComponent( $event, 'settings')" > <span class="material-symbols-outlined">settings</span></a>
       </li>
     </ul>
-  </div>
+     <!-- Login-Formular anzeigen, wenn der Benutzer NICHT eingeloggt ist -->
+    <div *ngIf="!isLoggedIn" class="login-container">
+      <form class="login-form" (submit)="login($event)">
+        <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required>
+        <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <!-- Bereich für eingeloggte Benutzer -->
+    <div *ngIf="isLoggedIn" class="login-container">
+      <span> </span>
+      <button (click)="logout()">Logout</button>
+    </div>
+</div>
 
 
   <div class="wrapper-container wrapper">

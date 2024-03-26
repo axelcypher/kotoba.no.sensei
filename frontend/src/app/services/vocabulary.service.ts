@@ -6,6 +6,8 @@ import vocabularyData  from '../../assets/vocabulary.json';
 import userData from '../../assets/userData.json';
 import config from '../../assets/config.json';
 
+import { ApiService } from './api.service';
+import { AuthService } from './auth.service';
 //import userConfig from '../../assets/userConfig.json';
 
 export interface Vocabulary {
@@ -39,8 +41,11 @@ interface GroupedVocabulary {
 
 export class VocabularyService implements OnInit {
   public lastVocab: Vocabulary | null = null;
-
-  constructor(private cookiesService: CookiesService) {} 
+  constructor(
+    private cookiesService: CookiesService,
+    private apiService: ApiService,
+    private authService: AuthService
+  ) {}
   
   ngOnInit(): void {
     // You can now use the dbService to interact with your SQLite database
@@ -119,11 +124,12 @@ export class VocabularyService implements OnInit {
     return groupedByChapter;
   }
 
-  getProgress(): { chapter: number; number: number; } {
-    const cookieName = 'progress'; // Name des Cookies
-    let progressC = this.cookiesService.getCookie(cookieName); // Versuch, den Cookie zu erhalten
+  async getProgress(): Promise<{ chapter: number; number: number; }> {
 
-    if (!progressC) {
+    const username = this.authService.getUsername(); // Assuming AuthService can provide the username
+    const data = await this.apiService.sendData(`progress/${username}`, {}).toPromise();
+
+    if (!data) {
       // Wenn der Cookie nicht existiert, werten Sie userData aus
       //let userData = this.generateUserData();
       let maxChapter = Math.max(...userData.map(item => item.chapter));
@@ -144,7 +150,7 @@ export class VocabularyService implements OnInit {
       }
     }
   
-    return JSON.parse(progressC); // Rückgabe des Cookie-Werts
+    return JSON.parse(data); // Rückgabe des Cookie-Werts
   }
 
   selectRandomVocab(currentChapter: number, currentNumber: number): Vocabulary | null {
@@ -170,9 +176,9 @@ export class VocabularyService implements OnInit {
       return selectedVocab;
     }
   
-  getProgressInPercent() {
+  async getProgressInPercent() {
     const vocabWithProgress = this.generateUserData();
-    const prog: { chapter: number; number: number; } = this.getProgress();
+    const prog: { chapter: number; number: number; } = await this.getProgress();
     const currentNumberData = vocabWithProgress.filter(entry => entry.number === prog.number);
     const totalCards =currentNumberData.length;
     const maxRankCards = currentNumberData.filter(entry => entry.progress?.rank === config.appSettings.defaultRanksCount).length;

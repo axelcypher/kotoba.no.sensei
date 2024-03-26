@@ -9,7 +9,7 @@
         </div>
       </div>
 
-      <p class="titleChapter">Kapitel {{progress.chapter}} - {{progress.number}}</p>
+      <p class="titleChapter">Kapitel {{progress?.chapter}} - {{progress?.number}}</p>
       
       <div class="progress progress-center" role="progressbar" aria-label="Basic example" [attr.aria-valuenow]=" numberPercent + '%'" aria-valuemin="0" aria-valuemax="100">
           <div class="progress-bar" [ngStyle]="{'width': numberPercent + '%'}">{{numberPercent}} %</div>

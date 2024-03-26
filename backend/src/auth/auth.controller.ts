@@ -12,8 +12,6 @@ import * as bcrypt from 'bcrypt';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { UserService } from './../user/user.service';
-import { CreateUserDto } from './../user/dto/create-user.dto';
-import { UpdateAuthDto } from './dto/update-auth.dto';
 import { LoginDto } from './dto/login.dto';
 
 import { Auth } from './entities/auth.entity';
@@ -29,6 +27,7 @@ export class AuthController {
   @Post('login')
   @ApiOkResponse({ type: Auth })
   login(@Body() { username, password }: LoginDto) {
+    console.log(username, password)
     return this.authService.login(username, password);
   }
 

@@ -10,10 +10,12 @@ import {
 } 
 from '@angular/router';
 import { APP_ROUTES } from './app/app.routes';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 
 bootstrapApplication(AppComponent, {
   providers: [
+    importProvidersFrom(HttpClientModule),
     provideRouter(APP_ROUTES, 
       withPreloading(PreloadAllModules),
       withDebugTracing(),
@@ -22,6 +24,7 @@ bootstrapApplication(AppComponent, {
 })
   .then(() => {
     console.log("App started successfully.");
+
   })
   .catch((err) => {
     console.error('Error bootstrapping the application:', err);

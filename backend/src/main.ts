@@ -10,6 +10,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe()); //{ whitelist: true }
 
+
+  app.enableCors();
+
   // Use DocumentBuilder to create a new Swagger document configuration
   const config = new DocumentBuilder()
     .setTitle('Kotoba no sensei - API') // Set the title of the API
