@@ -3,40 +3,86 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
+import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { PrismaService } from './../prisma/prisma.service';
 import { Auth } from './entities/auth.entity';
+import { UserService } from 'src/user/user.service';
 
 @Injectable()
 export class AuthService {
   constructor(
     private prisma: PrismaService,
     private jwtService: JwtService,
+    private userService: UserService,
   ) {}
 
   async login(username: string, password: string): Promise<Auth> {
-    // Step 1: Fetch a user with the given email
+
     const user = await this.prisma.user.findUnique({
       where: { username: username },
     });
-    // If no user is found, throw an error
     if (!user) {
       throw new NotFoundException(`No user found for username: ${username}`);
     }
-
-    // Step 2: Check if the password is correct
     const isPasswordValid = user.password === password;
-
-    // If password does not match, throw an error
     if (!isPasswordValid) {
       throw new UnauthorizedException('Invalid password');
     }
-
-    // Step 3: Generate a JWT containing the user's ID and return it
+    const tokens = await this.getTokens(user.id, user.username);
+    await this.updateRefreshToken(user.id, tokens.refreshToken);
+    const accessToken = tokens.accessToken;
+    const refreshToken = tokens.refreshToken;
     return {
-      accessToken: this.jwtService.sign({ userId: user.id }),
-    };
+      accessToken,
+      refreshToken,
+    }
   }
 
+  
+	async logout(userId: string) {
+    return this.userService.update(userId, { refreshToken: null });
+  }
 
+  hashData(data: string) {
+    return bcrypt.hash(data, 10);
+  }
+
+  async updateRefreshToken(userId: string, refreshToken: string) {
+    const hashedRefreshToken = await this.hashData(refreshToken);
+    await this.userService.update(userId, {
+      refreshToken: hashedRefreshToken,
+    });
+  }
+
+  
+  async getTokens(userId: string, username: string) {
+    const [accessToken, refreshToken] = await Promise.all([
+      this.jwtService.signAsync(
+        {
+          userId,
+          username,
+        },
+        {
+          secret: process.env.JWT_SECRET,
+          expiresIn: '15m',
+        },
+      ),
+      this.jwtService.signAsync(
+        { 
+          userId,
+          username,
+        },
+        {
+          secret: process.env.JWT_REFRESH_SECRET,
+          expiresIn: '30d',
+        },
+      ),
+    ]);
+
+    return {
+      accessToken,
+      refreshToken,
+    };
+  }
 }

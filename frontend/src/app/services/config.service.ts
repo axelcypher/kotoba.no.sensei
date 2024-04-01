@@ -1,42 +1,61 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import vocabularyData  from '../../assets/vocabulary.json';
+import defaultUserData from '../../assets/userData.json';
+import configFile from '../../assets/config.json';
+
+
+
+
+// src/app/app-config.ts
+
+export interface AppConfig {
+  title?: string;
+  port?: number,
+  apiURL?: string,
+  appSettings?: {
+        defaultRanksCount: number,
+        defaultPointsPerRank: number,
+        defaultTheresholdForNumber: number,      
+        defaultTheresholdForChapter: number,     
+        defaultVocabCooldown: number,        
+    }
+}
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConfigService implements OnInit {
+
+
+export class ConfigService  {
+
+  data: AppConfig = {};
+
+  constructor(private http: HttpClient) {}
 
   private appConfig: any;
 
-  constructor(private http: HttpClient) { }
-
-  ngOnInit() {
-    return this.http.get('/assets/config.json')
-      .toPromise()
-      .then(data => {
-        this.appConfig = data;
-      });
-  }
-
-  loadConfig() {
-    return this.http.get('/assets/config.json')
-      .toPromise()
-      .then(data => {
-        this.appConfig = data;
-      });
-  }
-
-  // This is an example property ... you can make it however you want.
   get port() {
-    if (!this.appConfig) {
-      throw Error('Config file not loaded!');
-    }
-    return this.appConfig.port;
+    return configFile.port;
+  }
+  get api() {
+    return configFile.apiURL;
+  }
+  get defaultVocabCooldown() {
+    return configFile.appSettings.defaultVocabCooldown;
+  }
+  get defaultRanksCount() {
+    return configFile.appSettings.defaultRanksCount;
+  }
+  get defaultPointsPerRank() {
+    return configFile.appSettings.defaultPointsPerRank;
+  }
+  get defaultUserData() {
+    return defaultUserData;
+  }
+  get vocabularyData() {
+    return vocabularyData;
   }
   
-  api(): string {
-    return "http://localhost:3000"
-    
-  }
 }

@@ -1,33 +1,29 @@
 import { Injectable, OnInit } from '@angular/core';
 import { CookiesService } from './cookie.service'; 
-//import { ApiService } from './api.service';
-
-import vocabularyData  from '../../assets/vocabulary.json';
-import userData from '../../assets/userData.json';
-import config from '../../assets/config.json';
 
 import { ApiService } from './api.service';
+import { ConfigService } from './config.service';
 import { AuthService } from './auth.service';
-//import userConfig from '../../assets/userConfig.json';
+import { UserService } from './user.services';
 
 export interface Vocabulary {
   kana: string; 
-  sound: string;
+  sound?: string;
   romanji: string;
   translated: string;
   chapter: number;
   number: number;
   progress?: { // Machen Sie 'progress' optional
-    rank: number;
-    points: number;
-    correct: number;
-    incorrect: number;
-    lastActivity: number;
-    lastRankUp: number;
+    rank?: number;
+    points?: number;
+    correct?: number;
+    incorrect?: number;
+    lastActivity?: number;
+    lastRankUp?: number;
   };
 }
 
-interface GroupedVocabulary {
+export interface GroupedVocabulary {
   chapter: number;
   data: {
     number: number;
@@ -40,22 +36,30 @@ interface GroupedVocabulary {
 })
 
 export class VocabularyService implements OnInit {
-  public lastVocab: Vocabulary | null = null;
+  public lastVocab: Vocabulary | Vocabulary = {
+    "kana":"", 
+    "romanji": "", 
+    "translated": "", 
+    "chapter": 0, 
+    "number": 0
+  };
+  public fullVocabulary: Vocabulary[] = [];
+
   constructor(
     private cookiesService: CookiesService,
     private apiService: ApiService,
-    private authService: AuthService
+    private authService: AuthService,
+    private config: ConfigService,
+    private userService: UserService,
   ) {}
   
   ngOnInit(): void {
-    // You can now use the dbService to interact with your SQLite database
   }
 
-  generateUserData(): Vocabulary[] {
-    const fullVocabulary: Vocabulary[] = vocabularyData.map(vocab => {
-      // Konvertieren Sie jedes Vokabular-Objekt in den Typ 'Vocabulary'
+  async initVocabularyData(): Promise<Vocabulary[]> {
+    const vocabularyData = this.config.vocabularyData;
+    let fullVocabulary: Vocabulary[] = vocabularyData.map(vocab => {
       const vocabCopy: Vocabulary = { ...vocab };
-      // Fügen Sie die 'progress'-Eigenschaft hinzu, falls sie fehlt
       if (!vocabCopy.progress) {
         vocabCopy.progress = {
           rank: 0,
@@ -68,31 +72,36 @@ export class VocabularyService implements OnInit {
       }
       return vocabCopy;
     });
-  
     // Hier könnten Sie weitere benutzerspezifische Daten hinzufügen oder die Daten weiter anpassen
     // Zum Beispiel könnten Sie hier 'userData' hinzufügen, falls notwendig
-  
+    
+    if (this.authService.isLoggedIn) {
+      const userVocabularyData = await this.apiService.getProgress();
+      fullVocabulary = this.mergeVocabularyData(userVocabularyData, fullVocabulary);
+      console.log(fullVocabulary);
+    }
+    this.fullVocabulary = fullVocabulary;
     return fullVocabulary;
   }
-
-  sortUserData(): Vocabulary[] {
-    return this.generateUserData().sort((a, b) => {
-      // Zuerst nach 'chapter' sortieren
-      if (a.chapter < b.chapter) return -1;
-      if (a.chapter > b.chapter) return 1;
+  mergeVocabularyData(userData: Vocabulary[], vocabularyData: Vocabulary[]): Vocabulary[] {
+    const mergedData = [...vocabularyData]; // Starten mit einer Kopie der Vokabeldaten
   
-      // Wenn 'chapter' gleich ist, nach 'number' sortieren
-      if (a.number < b.number) return -1;
-      if (a.number > b.number) return 1;
-  
-      // Wenn sowohl 'chapter' als auch 'number' gleich sind
-      return 0;
+    userData.forEach(userItem => {
+      const existingIndex = mergedData.findIndex(vocabItem => vocabItem.kana === userItem.kana && vocabItem.translated === userItem.translated);
+      if (existingIndex > -1) {
+        // Eintrag existiert, überschreiben
+        mergedData[existingIndex] = userItem;
+      } else {
+        // Eintrag existiert nicht, hinzufügen
+        mergedData.push(userItem);
+      }
     });
+    this.fullVocabulary = mergedData;
+    return mergedData;
   }
-
-  sortAndGroupUserData(): GroupedVocabulary[] {
+  get getSortedAndGroupedVocabularyData(): GroupedVocabulary[] {
     // Schritt 1: Daten sortieren
-    const sortedData = this.generateUserData().sort((a, b) => {
+    const sortedData = this.fullVocabulary.sort((a, b) => {
       if (a.chapter < b.chapter) return -1;
       if (a.chapter > b.chapter) return 1;
       if (a.number < b.number) return -1;
@@ -123,76 +132,33 @@ export class VocabularyService implements OnInit {
   
     return groupedByChapter;
   }
-
-  async getProgress(): Promise<{ chapter: number; number: number; }> {
-
-    const username = this.authService.getUsername(); // Assuming AuthService can provide the username
-    const data = await this.apiService.sendData(`progress/${username}`, {}).toPromise();
-
-    if (!data) {
-      // Wenn der Cookie nicht existiert, werten Sie userData aus
-      //let userData = this.generateUserData();
-      let maxChapter = Math.max(...userData.map(item => item.chapter));
-      let maxNumberInMaxChapter = Math.max(...userData.filter(item => item.chapter === maxChapter).map(item => item.number));
-      // Find the object with the highest chapter and number
-      let highestProgressObject = userData.find(item => item.chapter === maxChapter && item.number === maxNumberInMaxChapter);
-      let progress: {chapter: number; number: number;};
-      if (highestProgressObject) {
-        progress = {
-          chapter: highestProgressObject.chapter,
-          number: highestProgressObject.number
-        };
-        console.log(JSON.stringify(progress), 'dadada')
-        console.log(progress)
-        this.cookiesService.setCookie('progress', JSON.stringify(progress))  
-        return progress
-
-      }
-    }
-  
-    return JSON.parse(data); // Rückgabe des Cookie-Werts
+  get getVocabularyData(): Vocabulary[]{
+    return this.fullVocabulary;
   }
 
-  selectRandomVocab(currentChapter: number, currentNumber: number): Vocabulary | null {
-      const cooldownTime = config.appSettings.defaultVocabCooldown * 60000; // Convert minutes to milliseconds
-      const now = Date.now();
-      const validVocabs = this.generateUserData().filter(vocab => {
-        const lastRankUpTime = vocab.progress?.lastRankUp || 0;
-        const rank = vocab.progress?.rank ?? 0; 
-        const timeDiff = now - lastRankUpTime;
-        return vocab.chapter <= currentChapter &&
-              vocab.number <= currentNumber &&
-              timeDiff >= cooldownTime &&
-              vocab !== this.lastVocab &&
-              Math.random() < (1 / (1 + rank || 0)); // Lower chance for higher ranks
-      });
+  async selectRandomVocab(currentChapter: number, currentNumber: number, lastVocab: Vocabulary = this.lastVocab): Promise<any> {
+    const cooldownTime = this.config.defaultVocabCooldown * 60000; // Convert minutes to milliseconds
+    const now = Date.now();
+    const initData = this.fullVocabulary;
+    const validVocabs = initData.filter(vocab => {
+      const lastRankUpTime = vocab.progress?.lastRankUp || 0;
+      const rank = vocab.progress?.rank ?? 0; 
+      const timeDiff = now - lastRankUpTime;
+      return vocab.chapter <= currentChapter &&
+            vocab.number <= currentNumber &&
+            timeDiff >= cooldownTime &&
+            vocab !== lastVocab &&
+            Math.random() < (1 / (1 + rank || 0)); // Lower chance for higher ranks
+    });
 
-      if (validVocabs.length === 0) return null;
-
-      const randomIndex = Math.floor(Math.random() * validVocabs.length);
-      const selectedVocab = validVocabs[randomIndex];
-      this.lastVocab = selectedVocab; // Store the last selected vocab
-
-      return selectedVocab;
-    }
-  
-  async getProgressInPercent() {
-    const vocabWithProgress = this.generateUserData();
-    const prog: { chapter: number; number: number; } = await this.getProgress();
-    const currentNumberData = vocabWithProgress.filter(entry => entry.number === prog.number);
-    const totalCards =currentNumberData.length;
-    const maxRankCards = currentNumberData.filter(entry => entry.progress?.rank === config.appSettings.defaultRanksCount).length;
-    const progress = Math.floor((maxRankCards / totalCards) * 100);
-
-    return progress;
-}
-
-  saveUserData(userData: Vocabulary): void {
-    const endpoint = "/api/v1/updateuserdata/"
-    //let apiService = this.apiService;
-    
-    
+    if (validVocabs.length === 0) return ' ';
+    const randomIndex = Math.floor(Math.random() * validVocabs.length);
+    const selectedVocab = validVocabs[randomIndex];
+    this.lastVocab = selectedVocab; // Store the last selected vocab
+    return selectedVocab;
   }
+  
+
 
 
 }

@@ -13,6 +13,7 @@ async function main() {
       email: 'admin@example.com',
       username: 'admin',
       password: 'admins',
+      refreshToken:'dwdawdafa23rr2',
     },
   });
 
@@ -28,7 +29,7 @@ async function main() {
         rank: 1,
         points: 3,
         correct: 5,
-        incorrect: 0,
+        incorrect: 2,
         lastActivity: 0,
         lastRankUp: 0,
       },

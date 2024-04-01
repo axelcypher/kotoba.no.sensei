@@ -17,7 +17,7 @@ model Progress {
   id            String    @id @default(auto()) @map("_id") @db.ObjectId
   userId        String    @unique @db.ObjectId
   user          User      @relation(fields: [userId], references: [id])
-  data          Json
+  data          Json[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
@@ -26,9 +26,10 @@ model Progress {
 
 model User {
   id              String   @id @default(auto()) @map("_id") @db.ObjectId
-  email           String   
+  email           String?   
   username        String   @unique
   password        String
+  refreshToken    String?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
   progress        Progress[]

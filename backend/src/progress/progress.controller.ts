@@ -21,37 +21,36 @@ import { ApiBearerAuth, ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nest
 export class ProgressController {
   constructor(private readonly progressService: ProgressService) {}
 
-  @Post()
+  @Post(':userId')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth('JWT-auth')
-  @ApiCreatedResponse({ type: Progress })
-  create(@Body() createProgressDto: CreateProgressDto) {
+  create(@Body() createProgressDto: CreateProgressDto, @Param('userId') userId: string) {
+
     return this.progressService.create(createProgressDto);
   }
-
-  @Get(':username')
+  @Get(':userId')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth('JWT-auth')
-  @ApiCreatedResponse({ type: Progress })
-  findOne(@Param('username') username: string) {
-    const resp = this.progressService.findOne(username);
-    console.log(resp);
+  findOne(@Param('userId') userId: string) {
+    
+    const resp = this.progressService.findOne(userId);
     return resp; 
   }
-
-  @Patch(':username')
+ 
+  @Patch(':userId')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth('JWT-auth')
-  @ApiCreatedResponse({ type: Progress })
-  update(@Param('username') username: string, @Body() updateProgressDto: UpdateProgressDto) {
-    return this.progressService.update(username, updateProgressDto);
+  update(@Param('userId') userId: string, @Body() updateProgressDto: UpdateProgressDto) {
+    console.log("Updating User Progres...")
+    const vocab:any = updateProgressDto.data;
+    return this.progressService.update(userId, vocab);
   }
 
-  @Delete(':username')
+  @Delete(':userId')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth('JWT-auth')
   @ApiCreatedResponse({ type: Progress })
-  remove(@Param('username') username: string) {
-    return this.progressService.remove(username);
+  remove(@Param('userId') userId: string) {
+    return this.progressService.remove(userId);
   }
 }

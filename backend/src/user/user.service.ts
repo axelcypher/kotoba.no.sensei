@@ -27,11 +27,14 @@ export class UserService {
       `User is created with username ${username} and encrypted password ${hashedPassword}`,
     );
   }
-  /*
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id}${updateUserDto} user`;
+  
+  async update(userId: string, updateUserDto: UpdateUserDto): Promise<User> {
+    return this.prisma.user.update({
+      where: { id: userId },
+      data: updateUserDto,
+    });
   }
-
+  /*
   remove(id: number) {
     return `This action removes a #${id} user`;
   }*/

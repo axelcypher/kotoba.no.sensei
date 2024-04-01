@@ -9,20 +9,20 @@
         </div>
       </div>
 
-      <p class="titleChapter">Kapitel {{progress?.chapter}} - {{progress?.number}}</p>
+      <p class="titleChapter">Kapitel {{userProgress.chapter}} - {{userProgress.number}}</p>
       
-      <div class="progress progress-center" role="progressbar" aria-label="Basic example" [attr.aria-valuenow]=" numberPercent + '%'" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar" [ngStyle]="{'width': numberPercent + '%'}">{{numberPercent}} %</div>
+      <div class="progress progress-center" role="progressbar" aria-label="Basic example" [attr.aria-valuenow]=" userProgressInPercent + '%'" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" [ngStyle]="{'width': userProgressInPercent + '%'}">{{userProgressInPercent}} %</div>
       </div>
       
       <p class="subtextRank">Fach </p>
-
+ 
       <div class="score-container">
               <div class="score-circle"></div>
       </div> 
 
-      <p id="vocabDisplay" [attr.data-hover-text]='vocabData?.romanji'>{{ vocabData?.kana }}</p>
-      <p class="tab-romanji" style="height: 8px;">{{ vocabData?.romanji }} </p>
+      <p id="vocabDisplay" [attr.data-hover-text]='currentVocab?.romanji'>{{ currentVocab?.kana }}</p>
+      <p class="tab-romanji" style="height: 8px;" *ngIf="rank < 1">{{ currentVocab?.romanji }}</p>
 
       <input [formControl]="vocabControl" type="text" id="userInput" name="userInput" placeholder="" required autocomplete="off" (keydown.enter)="submitVocab()">
       

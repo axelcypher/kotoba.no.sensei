@@ -11,17 +11,22 @@ import {
 from '@angular/router';
 import { APP_ROUTES } from './app/app.routes';
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { ConfigService } from './app/services/config.service';
 
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    importProvidersFrom(HttpClientModule),
-    provideRouter(APP_ROUTES, 
-      withPreloading(PreloadAllModules),
-      withDebugTracing(),
-    ),
-  ]
-})
+async function bootstrap() {
+  await bootstrapApplication(AppComponent, {
+    providers: [
+      importProvidersFrom(HttpClientModule),
+      provideRouter(APP_ROUTES, 
+        withPreloading(PreloadAllModules), //withDebugTracing(),
+        
+      )
+    ]
+  })
+}
+
+bootstrap()
   .then(() => {
     console.log("App started successfully.");
 

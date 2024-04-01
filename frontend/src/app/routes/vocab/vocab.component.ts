@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormGroup, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { VocabularyService, Vocabulary } from '../../services/vocabulary.service';
- 
- 
+import { ProgressService, Progress } from '../../services/progress.service';
+import { ApiService } from '../../services/api.service';
+import { UserService } from '../../services/user.services'; 
+import { ConfigService } from '../../services/config.service';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,16 +19,34 @@ export class VocabComponent implements OnInit {
   title = 'ことばのせんせい - kotoba no sensei - Progress';
 
   
-  constructor(private Vocab: VocabularyService) {}
+  constructor(
+    private Progr: ProgressService,
+    private Vocab: VocabularyService,
+    private API: ApiService,
+    private userService: UserService,
+    private config: ConfigService,
+  ) {}
 
   private learningMode: any | null = null;
 
   public lastVocab = this.Vocab.lastVocab;
-  public progress: { chapter: number; number: number; } | null = null;
-  public vocabData: Vocabulary | null = null;
-  public numberPercent = this.Vocab.getProgressInPercent();
+  public currentVocab: Vocabulary | Vocabulary = { 
+    kana:"", 
+    romanji:"", 
+    translated:"", 
+    progress: {
+      points: 1 
+    },
+    chapter: 1, 
+    number: 1
+  };
+  public rank = this.currentVocab?.progress?.rank ?? 0;
+  public userProgress: Progress | Progress = { chapter: 1, number: 1 };
+  public userProgressInPercent = this.Progr.calcChProgressInPercent();
+
   public feedback = '';
 
+  
   vocabControl:FormControl = new FormControl(null);
 
   learningModeControl = new FormGroup({
@@ -34,14 +55,21 @@ export class VocabComponent implements OnInit {
   });
 
   async ngOnInit() {
-    await this.initializeVocabData();
-    
+    await this.Vocab.initVocabularyData();
+    this.currentVocab = await this.Vocab.selectRandomVocab(this.userProgress.chapter, this.userProgress.number);
   }
- 
+
   async initializeVocabData() {
-    this.progress = await this.Vocab.getProgress();
-    this.vocabData = this.Vocab.selectRandomVocab(this.progress.chapter, this.progress.number);
+    try {
+      this.userProgress = await this.Progr.getProgress; // This should be an async call to your service
+    } catch (error) {
+      console.error("Failed to initialize vocabulary data", error);
+      this.userProgress = await this.Progr.getProgress;
+      let randomVocab = await this.Vocab.selectRandomVocab(this.userProgress.chapter, this.userProgress.number);
+      this.currentVocab = randomVocab;
+    }
   }
+  
   
   async submitVocab() {
     this.learningMode = "kana";
@@ -70,17 +98,51 @@ export class VocabComponent implements OnInit {
     // Feedback basierend auf der Korrektheit der Antwort setzen
     this.feedback = isCorrect ? '<span class="msgCorrect">Richtig! Gut gemacht.</span>' : '<span class="msgIncorrect">Leider falsch. Versuche es noch einmal.</span>';
     this.hideFeedbackAfterDelay();
-    let Vnumber = this.progress?.number || 1;
-    let Vchapter = this.progress?.chapter || 1;
+    let Vnumber = this.userProgress?.number || 1;
+    let Vchapter = this.userProgress?.chapter || 1;
+
+    const defaultPointsPerRank = this.config.defaultPointsPerRank;
+
+
     if (isCorrect) {
-      // Wähle eine neue Vokabel, wenn die Antwort richtig ist
-      this.vocabData = this.Vocab.selectRandomVocab( Vchapter, Vnumber );
+      
+      if (typeof this.currentVocab?.progress?.points === 'undefined') {
+        this.currentVocab.progress = {
+          points: 1,
+        };
+
+      } else {
+        this.currentVocab.progress.points += 1;
+      }
+      const voca = this.currentVocab;
+      
+      
+      const userId = this.userService.getUserId;
+      if (userId) {
+        await this.API.sendProgress(userId, voca);
+        let randomVocab = await this.Vocab.selectRandomVocab( Vchapter, Vnumber );
+        this.currentVocab = randomVocab;
+      } else {
+        let randomVocab = await this.Vocab.selectRandomVocab( Vchapter, Vnumber );
+        this.currentVocab = randomVocab;
+      }
+      
+    } else {
+      if (typeof this.currentVocab?.progress?.points === 'undefined') {
+        this.currentVocab.progress = {
+          points: 0,
+        };
+
+      } else {
+        this.currentVocab.progress.points = (Math.floor(this.currentVocab.progress.points / defaultPointsPerRank) - 1) * defaultPointsPerRank;
+        this.currentVocab.progress.points = Math.max(0, this.currentVocab.progress.points);
+      }
       
     }
   
     // Eingabefeld zurücksetzen
-    this.vocabControl.reset();
-  }
+    this.vocabControl.reset(); 
+   }
 
   hideFeedbackAfterDelay() {
     setTimeout(() => {
@@ -92,6 +154,4 @@ export class VocabComponent implements OnInit {
     let mode = this.learningModeControl.value;
     console.log(mode);
   }
-
-
 }
